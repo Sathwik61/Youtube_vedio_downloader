@@ -1,13 +1,4 @@
 {
-    "builds": [
-      {
-        "src": "ytdownloader/wsgi.py",
-        "use": "@vercel/python",
-        "config": {
-          "runtime": "python3.9"
-        }
-      }
-    ],
     "routes": [
       {
         "src": "/static/(.*)",
@@ -21,6 +12,8 @@
         "src": "/(.*)",
         "dest": "ytdownloader/wsgi.py"
       }
-    ]
+    ],
+    "scripts": {
+      "build": "./build_files.sh"
+    }
   }
-  
